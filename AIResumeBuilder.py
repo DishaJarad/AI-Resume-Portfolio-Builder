@@ -7,7 +7,7 @@ st.set_page_config(page_title="AI Resume & Portfolio Builder", layout="centered"
 
 
 genai.configure(api_key="YOUR GOOGLE API KEY HERE")
-model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 
 st.title("🎓 AI Resume & Portfolio Builder")
@@ -260,4 +260,5 @@ if st.button("✨ Generate Professional Resume"):
                                        final_intern_text, res_type)
                 st.download_button(f"📥 Download {res_type} PDF", pdf_bytes, f"{name}_Resume.pdf", "application/pdf")
             except Exception as e:
+
                 st.error(f"Error: {e}")
